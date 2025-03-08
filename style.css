@@ -5,6 +5,92 @@
     box-sizing: border-box;
 }
 
+/*to responsive navbar*/
+/*--------------- Toggle Button for Mobile ---------------------*/
+.nav-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #196AB3;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #196AB3;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* Active State for Toggle Button */
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+}
+
+/* Mobile Navbar Styles */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .main-nav {
+        display: none; /* Hide nav links by default on mobile */
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background-color: #f0efef;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .main-nav.active {
+        display: block; /* Show nav links when active */
+    }
+
+    .main-nav li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .main-nav li a {
+        font-size: 18px; /* Increase font size for better readability */
+    }
+}
+
+
 html {
     background-color: #f9f9f9;
     color: #555;
