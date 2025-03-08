@@ -169,7 +169,7 @@ ul li .a2:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #196AB3;
+    background: #62b6ff; /* lon hover */
     transition: 0.5s;
     transform-origin: right;
     transform: scaleX(0);
