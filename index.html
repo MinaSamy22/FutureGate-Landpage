@@ -13,6 +13,11 @@
             <div>
                 <img src="img/logo-.png" class="navlogo">
                 <h4>Future Gate</h4>
+                <!-- Toggle Button for Mobile -->
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <!-- Navigation Links -->
                 <ul class="main-nav">
                     <li><a class="a2" href="#home"><span>Home</span></a></li>
                     <li><a class="a2" href="#features"><span>Our Features</span></a></li>
@@ -135,9 +140,15 @@
     </div>
 </section>
 
-<!-- Font Awesome for Icons -->
-<script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+<script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
+    navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+</script>
 
 
 
